@@ -72,7 +72,7 @@ class Linklist1 {
 class Node {
     int data;
     Node next;
-
+//node
     public Node(int data) {
         this.data = data;
     }
