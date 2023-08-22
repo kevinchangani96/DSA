@@ -16,9 +16,9 @@ public class matrix {
 //        zigzagprintmatrix(arr, row, col);
 //        mirrormatrix(arr, row, col);
 //        highestrowsumfrommatrix(arr, row, col);
-//        Print_diagonal_elementstop_left_to_bottom_right_(arr, row, col);
+        Print_diagonal_elementstop_left_to_bottom_right_(arr, row, col);
 //        Printdiagonalelementstop_righttobottom_left(arr,row,col);
-//        sumOfDiagonal(arr,row,col);
+        sumOfDiagonal(arr,row,col);
 //        searchSortedRowAndCol(arr,row,col);
         shortestPath(arr,row,col);
 
