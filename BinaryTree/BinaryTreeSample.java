@@ -4,6 +4,7 @@ import javax.print.DocFlavor;
 import java.util.Deque;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 import java.util.concurrent.LinkedBlockingQueue;
 
 //              10
@@ -29,13 +30,37 @@ public class BinaryTreeSample {
 //        System.out.println();
 //        tree.postorderprint();
 //        System.out.println();
-        System.out.println(tree.countnode(tree.root));
-        tree.nthnode(tree.root, 5);
-        System.out.println(tree.findnode(tree.root, 10));
-        System.out.println(heightoftree(tree.root));
-        tree.PrintSprialLevel();
+//        System.out.println(tree.countnode(tree.root));
+//        tree.nthnode(tree.root, 5);
+//        System.out.println(tree.findnode(tree.root, 10));
+//        System.out.println(heightoftree(tree.root));
+//        tree.PrintSprialLevel();
+
+
+        PreLevelPrintWithoutRecursion(tree.root);
 
     }
+
+    private static void PreLevelPrintWithoutRecursion(Node root) {
+        if (root == null) {
+            return;
+        }
+        Stack<Node> stack = new Stack<>();
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            Node current = stack.pop();
+            System.out.print(current.data + " ");
+
+            if (current.right != null) {
+                stack.push(current.right);
+            }
+            if (current.left != null) {
+                stack.push(current.left);
+
+            }
+        }
+    }
+
 
     private static int heightoftree(Node root) {
         if (root == null) {
@@ -45,8 +70,6 @@ public class BinaryTreeSample {
         int rightheight = heightoftree(root.right);
         return 1 + Math.max(leftheight, rightheight);
     }
-
-
 }
 
 class tree {
@@ -179,7 +202,7 @@ class tree {
                     }
                     size--;
                 }
-                    System.out.println();
+                System.out.println();
 
 
             }
